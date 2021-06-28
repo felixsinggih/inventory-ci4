@@ -21,7 +21,7 @@ class Barang extends BaseController
         $barang = $this->barangModel;
         $data = [
             'title' => 'Data Barang',
-            'barang'  => $barang->paginate(2, 'barang'),
+            'barang'  => $barang->paginate(25, 'barang'),
             'pager' => $this->barangModel->pager,
             'act'   => 'barang',
             'currentPage' => $currentpage,
